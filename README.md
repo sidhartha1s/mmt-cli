@@ -144,9 +144,17 @@ To make the entry durable, pick one:
    ```
    Switch to this branch when rebuilding pp; rebase onto upstream `main` periodically.
 
-2. **Symlink from this repo**: keep the canonical YAML in
-   `mmt-cli/catalog/makemytrip.yaml`, symlink it into the pp tree, rebuild.
-   The symlink survives `git pull` (still untracked from pp's POV).
+2. **Hardlink from this repo** (what we ship): keep the canonical YAML in
+   `mmt-cli/catalog/makemytrip.yaml`, hardlink it into the pp tree, rebuild.
+   ```bash
+   ln /home/sidhartha/mmt-cli/catalog/makemytrip.yaml \
+      /home/sidhartha/cli-printing-press/catalog/makemytrip.yaml
+   ```
+   Hardlink (not symlink) because Go's `go:embed *.yaml` rejects symlinks
+   with `cannot embed irregular file`. A hardlink shares the inode, so a
+   single edit is visible in both repos and `go:embed` accepts it as a
+   regular file. Recreate after a fresh pp clone (hardlinks don't survive
+   git checkout into a new working tree).
 
 3. **Fork pp**: push `simplotel/cli-printing-press` and land the entry on a
    long-lived branch.

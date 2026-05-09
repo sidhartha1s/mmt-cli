@@ -49,7 +49,10 @@ wrapper_libraries:
       playwright, playwright-stealth at runtime.
 
       Repo at github.com/sidhartha1s/mmt-cli is the canonical home. The pp
-      tree symlinks this catalog YAML into catalog/makemytrip.yaml so a
-      single edit propagates to both the embedded catalog and the source
-      repo. If symlink resolution fails (vendored builds, hermetic CI),
-      copy mmt-cli/catalog/makemytrip.yaml into pp/catalog/ verbatim.
+      tree hardlinks this YAML into catalog/makemytrip.yaml (same inode, so
+      a single edit is visible in both repos AND Go's go:embed accepts it
+      as a regular file — symlinks fail with "cannot embed irregular file").
+      Recreate the hardlink after a fresh git clone:
+        ln /home/sidhartha/mmt-cli/catalog/makemytrip.yaml \
+           /home/sidhartha/cli-printing-press/catalog/makemytrip.yaml
+      For hermetic builds where hardlinks aren't viable, copy the file.
