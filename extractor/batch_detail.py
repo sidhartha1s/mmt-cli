@@ -7,25 +7,103 @@ Reads the output of ``discover_urls.py`` (a list of objects with
 and writes per-slug JSON to ``--out-dir``. Properties with no
 candidates are recorded in the summary but not fetched.
 
-A summary index (``index.json`` in ``--out-dir``) maps slug→
-{name, mmt_url, hotel_id, status, error}.
+The summary index (``index.json`` in ``--out-dir``) records per-slug
+fetch metadata for failure post-mortem: HTTP status, body size, body
+signature, profile used, session age (seconds since warmup), retry
+count, warmup status, error class, and timestamps.
 
 Usage:
-    python3 batch_detail.py \\
-        --in test-fixtures/gdhotels_mmt_urls.json \\
-        --out-dir test-fixtures/gdhotels_mmt_details/
+    python3 extractor/batch_detail.py \\
+        --in experiments/<run>/discovery.json \\
+        --out-dir experiments/<run>/details/
 """
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
+import re
 import sys
 import time
 from pathlib import Path
+from typing import Any
 
-from mmt_detail import extract, make_session
+from mmt_detail import (
+    WARMUP_URLS,
+    build_record,
+    make_session,
+    parse_initial_state,
+    parse_jsonld_hotel,
+)
 
 PAUSE = 4.0
+
+
+def _now_iso() -> str:
+    return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+
+
+_TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+
+
+def _body_signature(body: bytes) -> str:
+    """Cheap fingerprint of a response body for grouping similar failures."""
+    if len(body) <= 32:
+        return f"short:{body[:32]!r}"
+    head = body[:120]
+    m = _TITLE_RE.search(head.decode("utf-8", "ignore"))
+    if m:
+        return f"title:{m.group(1).strip()[:80]}"
+    return f"head:{head[:80]!r}"
+
+
+def _classify(status: int, body: bytes) -> str:
+    """Bucket a fetch outcome into a short error class for the summary."""
+    if status != 200:
+        return f"http_{status}"
+    if len(body) < 100:
+        return "akamai_sentinel"
+    if len(body) < 5000:
+        return "short_body"
+    return "parse_failed"
+
+
+def _check_warmup(session: Any) -> dict[str, bool]:
+    """Probe the warmup URLs on an existing session; return per-URL ok flags."""
+    out: dict[str, bool] = {}
+    for w in WARMUP_URLS:
+        try:
+            r = session.get(w, timeout=15, allow_redirects=True)
+            out[w] = r.status_code == 200 and len(r.content) > 5000
+        except Exception:
+            out[w] = False
+    return out
+
+
+def _attempt_fetch(session: Any, url: str) -> dict[str, Any]:
+    """One GET attempt. Returns rich metadata, never raises."""
+    started = time.monotonic()
+    rec: dict[str, Any] = {
+        "ts": _now_iso(),
+        "status": None,
+        "body_size": 0,
+        "body_signature": None,
+        "exception_class": None,
+        "exception_msg": None,
+        "elapsed_ms": None,
+    }
+    try:
+        r = session.get(url, timeout=25, allow_redirects=True)
+        body = r.content
+        rec["status"] = r.status_code
+        rec["body_size"] = len(body)
+        rec["body_signature"] = _body_signature(body)
+        rec["body"] = body
+    except Exception as e:
+        rec["exception_class"] = type(e).__name__
+        rec["exception_msg"] = str(e)[:300]
+    rec["elapsed_ms"] = int((time.monotonic() - started) * 1000)
+    return rec
 
 
 def main() -> int:
@@ -41,24 +119,8 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     session, profile = make_session()
+    session_started = time.monotonic()
     print(f"using TLS profile: {profile}", file=sys.stderr)
-
-    def _extract_with_refresh(url: str):
-        """Extract; on Akamai sentinel, rebuild session once and retry.
-
-        Akamai blacklists a warmed-up session after a few detail fetches.
-        Re-warming with a fresh impersonation gets us another window.
-        """
-        nonlocal session, profile
-        try:
-            return extract(url, session=session)
-        except RuntimeError as e:
-            if "sentinel" not in str(e).lower():
-                raise
-            print(f"  sentinel hit, rebuilding session...", file=sys.stderr)
-            session, profile = make_session()
-            print(f"  new TLS profile: {profile}", file=sys.stderr)
-            return extract(url, session=session)
 
     summary: list[dict] = []
     for i, r in enumerate(rows, 1):
@@ -68,13 +130,53 @@ def main() -> int:
         if not candidates:
             print(f"[{i}/{len(rows)}] SKIP {slug} (no candidates)")
             summary.append(
-                {"slug": slug, "name": name, "mmt_url": None, "status": "no_candidate"}
+                {
+                    "slug": slug,
+                    "name": name,
+                    "mmt_url": None,
+                    "status": "no_candidate",
+                    "ts": _now_iso(),
+                }
             )
             continue
 
         url = candidates[0]
-        try:
-            record = _extract_with_refresh(url)
+        attempts: list[dict[str, Any]] = []
+        record: dict[str, Any] | None = None
+        error_class: str | None = None
+
+        for retry in range(2):  # original + one session-rebuild retry
+            session_age = round(time.monotonic() - session_started, 1)
+            attempt = _attempt_fetch(session, url)
+            attempt["retry"] = retry
+            attempt["profile"] = profile
+            attempt["session_age_s"] = session_age
+
+            body = attempt.pop("body", b"")
+            if attempt["status"] == 200 and len(body) >= 5000:
+                html = body.decode("utf-8", "ignore")
+                state = parse_initial_state(html)
+                jsonld = parse_jsonld_hotel(html)
+                if state or jsonld:
+                    record = build_record(url, state or {}, jsonld)
+                    attempts.append(attempt)
+                    break
+                error_class = "parse_failed"
+            else:
+                error_class = _classify(attempt["status"] or 0, body)
+
+            attempts.append(attempt)
+            if retry == 0 and error_class in {"akamai_sentinel", "short_body"}:
+                print(f"  {error_class}, rebuilding session...", file=sys.stderr)
+                session, profile = make_session()
+                session_started = time.monotonic()
+                print(f"  new TLS profile: {profile}", file=sys.stderr)
+                continue
+            break
+
+        warmup_ok = _check_warmup(session)
+
+        if record is not None:
             (out_dir / f"{slug}.json").write_text(
                 json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8"
             )
@@ -90,17 +192,27 @@ def main() -> int:
                     "hotel_id": record.get("hotelId"),
                     "mmt_name": record.get("name"),
                     "status": "ok",
+                    "attempts": attempts,
+                    "warmup_ok": warmup_ok,
                 }
             )
-        except Exception as e:
-            print(f"[{i}/{len(rows)}] ERR  {slug}: {e}", file=sys.stderr)
+        else:
+            last = attempts[-1] if attempts else {}
+            print(
+                f"[{i}/{len(rows)}] ERR  {slug}: "
+                f"{error_class} status={last.get('status')} "
+                f"size={last.get('body_size')} sig={last.get('body_signature')}",
+                file=sys.stderr,
+            )
             summary.append(
                 {
                     "slug": slug,
                     "name": name,
                     "mmt_url": url,
                     "status": "error",
-                    "error": str(e),
+                    "error_class": error_class,
+                    "attempts": attempts,
+                    "warmup_ok": warmup_ok,
                 }
             )
         time.sleep(PAUSE)
