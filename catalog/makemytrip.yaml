@@ -1,0 +1,55 @@
+name: makemytrip
+display_name: MakeMyTrip Hotels
+description: Hotel listing search via MakeMyTrip India. No public API — reached through a community-maintained Playwright DOM-scrape extractor that bypasses Akamai Bot Manager by accumulating browser trust before extraction.
+category: travel
+tier: community
+verified_date: "2026-05-09"
+homepage: https://www.makemytrip.com/hotels/
+notes: |
+  MakeMyTrip does not publish a hotels API. The internal XHR endpoint
+  (/api/hotels-search/listing/v3/search-hotels) is gated by Akamai Bot Manager
+  and returns a 6-byte "200-OK" sentinel until the browser session has been
+  validated via the bm_sv sensor flow (cookie _abck must reach ~799 bytes;
+  bootstrap state is ~531 bytes). Replaying the request from urllib or fetch()
+  inside a freshly-launched Playwright context fails consistently across IPs
+  because the Akamai signal includes browser-fingerprint and timing telemetry
+  the replay cannot reproduce.
+
+  The wrapper avoids the API entirely. It loads the listing page in a
+  persistent Firefox context, lets SSR + hydration render the hotel cards,
+  scrolls to trigger lazy paints, and extracts data directly from the DOM
+  using getComputedStyle to filter line-through nodes (strikethrough prices)
+  out of the displayed-price field. This is the single most important
+  property of the extractor — strikethrough prices were corrupting downstream
+  copy-paste workflows and motivated the build.
+
+  Output is JSON. Each card carries: name, location, displayPrice (post-filter),
+  strikethroughPrices[] (kept for audit), rating, ratingLabel, reviewCount,
+  hotelId (parsed from ?hotelId= query string on the detail anchor), photoCount,
+  badges[], and detailUrl.
+
+  Caveats: Akamai may IP-flag the request source after sustained development
+  hammering. Symptoms: live nav succeeds but DOM stays empty, or the listing
+  HTML shrinks below ~500KB. Cooldown 2-6h and retry, or rotate egress.
+  An offline fixture at test-fixtures/offline_extract.json + validate_offline.py
+  proves the parser works independent of live Akamai.
+wrapper_libraries:
+  - name: sidhartha1s/mmt-cli
+    url: https://github.com/sidhartha1s/mmt-cli
+    language: python
+    license: MIT
+    integration_mode: subprocess
+    notes: |
+      Playwright-based DOM scraper. Multi-engine fallback chain (firefox -> webkit -> chromium)
+      with playwright_stealth applied per engine. Persistent context at
+      /tmp/mmt-cli-pw-profile accumulates Akamai trust across runs.
+      Invoke: python3 mmt_extract.py --city <slug> --checkin YYYY-MM-DD
+      --checkout YYYY-MM-DD [--max-cards N] [--engine firefox|webkit|chromium]
+      --out path.json [--screenshot path.png] [--headless]. Requires Python 3.10+,
+      playwright, playwright-stealth at runtime.
+
+      Repo at github.com/sidhartha1s/mmt-cli is the canonical home. The pp
+      tree symlinks this catalog YAML into catalog/makemytrip.yaml so a
+      single edit propagates to both the embedded catalog and the source
+      repo. If symlink resolution fails (vendored builds, hermetic CI),
+      copy mmt-cli/catalog/makemytrip.yaml into pp/catalog/ verbatim.
