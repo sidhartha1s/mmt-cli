@@ -1,0 +1,18 @@
+# live-run artifacts (regenerated per invocation)
+test-fixtures/goa.json
+test-fixtures/goa.png
+test-fixtures/*-live.json
+test-fixtures/*-live.png
+
+# Playwright profiles (machine-local, contain cookies)
+.playwright-profile/
+**/playwright-profile/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
