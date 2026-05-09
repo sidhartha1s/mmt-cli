@@ -72,9 +72,8 @@ def _strip_tracking(url: str) -> str:
     return urllib.parse.urlunparse(u._replace(query="", fragment=""))
 
 
-def search_bing(session: requests.Session, name: str) -> list[str]:
-    """Return MMT detail URL candidates from Bing for ``name``."""
-    query = f'"{name}" makemytrip'
+def search_bing(session: requests.Session, query: str) -> list[str]:
+    """Return MMT detail URL candidates from Bing for ``query``."""
     r = session.get(BING.format(urllib.parse.quote(query)), timeout=20)
     if r.status_code != 200:
         return []
@@ -96,9 +95,8 @@ def search_bing(session: requests.Session, name: str) -> list[str]:
     return found
 
 
-def search_ddg(session: requests.Session, name: str) -> list[str]:
+def search_ddg(session: requests.Session, query: str) -> list[str]:
     """Fallback: DuckDuckGo HTML endpoint."""
-    query = f'"{name}" makemytrip'
     r = session.get(DDG.format(urllib.parse.quote(query)), timeout=20)
     if r.status_code != 200:
         return []
@@ -140,19 +138,34 @@ def name_variants(name: str) -> list[str]:
     return variants
 
 
+def queries_for(variant: str) -> list[str]:
+    """Build search-query forms to try for one name variant.
+
+    The bare ``"<v>" makemytrip`` form catches most cases. Adding the
+    ``hotel`` keyword + ``site:`` operator helps when the name alone is
+    ambiguous (e.g. ``Kadison Davanagere`` only resolves with ``hotel``
+    appended — Bing otherwise returns unrelated results).
+    """
+    return [
+        f'"{variant}" makemytrip',
+        f'"{variant}" hotel site:makemytrip.com',
+    ]
+
+
 def discover(session: requests.Session, name: str) -> list[str]:
     """Try Bing (then DDG) across brand-stripped name variants."""
     seen: set[str] = set()
     out: list[str] = []
     for variant in name_variants(name):
-        for fn in (search_bing, search_ddg):
-            for url in fn(session, variant):
-                if url not in seen:
-                    seen.add(url)
-                    out.append(url)
-            if out:
-                return out
-            time.sleep(1.0)
+        for query in queries_for(variant):
+            for fn in (search_bing, search_ddg):
+                for url in fn(session, query):
+                    if url not in seen:
+                        seen.add(url)
+                        out.append(url)
+                if out:
+                    return out
+                time.sleep(1.0)
     return out
 
 
