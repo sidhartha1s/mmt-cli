@@ -6,9 +6,18 @@ onboarding to eliminate strikethrough-corruption-on-copy-paste — the live MMT
 listing UI shows discount markdowns as struck-through prices, which copy-pasted
 as the wrong value into onboarding sheets.
 
-**Status:** parser is production-ready (validated offline, 15/15 cards, 3/3
-expected names, strikethrough filter clean). Live extraction works when the
-egress IP is not Akamai-flagged.
+**Status — three components, three different maturity levels.** Read this
+before you trust any number out of this repo.
+
+| Component | Path | Status |
+|-----------|------|--------|
+| Listing extractor (DOM scrape, strikethrough-safe) | `extractor/mmt_extract.py` | **Production.** Validated offline (15/15 cards, 3/3 expected names, no strikethrough leaks). Live works when the egress IP is not Akamai-flagged. |
+| URL discovery (Bing/DDG → MMT detail URL) | `extractor/discover_urls.py` | **Experimental.** Brand-strip variants + multi-query Bing recover ~25–30% on small chains. Properties not listed on MMT can't be discovered. |
+| Detail-page enrichment (curl_cffi TLS impersonation) | `extractor/mmt_detail.py`, `batch_detail.py` | **Research.** Bypasses Akamai for short windows, then the egress IP is hardened and warmup itself fails. Treat per-run success rates as anecdotal until backed by a paid proxy/vendor. |
+
+The "production" line is listing extraction. The other two are useful as
+building blocks but should not be load-bearing in client onboarding without
+a residential-proxy or commercial-scraping backstop.
 
 ## What it does
 
@@ -48,7 +57,7 @@ itself renders the hotel cards via SSR + hydration, no XHR needed.
 
 ```bash
 # install deps
-pip install playwright playwright-stealth
+pip install -r requirements.txt
 playwright install firefox
 
 # extract Goa hotels
@@ -99,15 +108,45 @@ silently throttle the source IP. Symptoms:
 ```
 mmt-cli/
 ├── extractor/
-│   ├── mmt_extract.py       # production extractor, multi-engine fallback
-│   └── validate_offline.py  # offline regression test
+│   ├── mmt_extract.py        # production: listing extractor
+│   ├── validate_offline.py   # production: offline regression test
+│   ├── parser_smoke_test.py  # CI: offline tests for parser internals
+│   ├── discover_urls.py      # experimental: Bing/DDG URL discovery
+│   ├── mmt_detail.py         # research: detail-page extractor (Akamai-blocked)
+│   └── batch_detail.py       # research: batch wrapper around mmt_detail
 ├── test-fixtures/
-│   ├── offline_extract.json # 15 hotel cards from saved fixture
-│   ├── goa.json             # last live run (if any)
-│   └── goa.png              # screenshot from last live run
-└── docs/
-    └── LEARNINGS.md         # design notes, dead ends, what worked
+│   ├── offline_extract.json     # 15-card listing fixture for validate_offline
+│   ├── goa.json / goa.png       # last live listing run
+│   └── gdhotels_properties.json # curated 22-property seed list (input only)
+├── experiments/
+│   └── gdhotels_2026-05-10/  # one run's discovery+detail outputs (NOT a fixture)
+├── .github/workflows/ci.yml  # compileall + parser smoke test on every push
+├── requirements.txt          # playwright(+stealth), curl_cffi
+└── docs/LEARNINGS.md         # design notes, dead ends, what worked
 ```
+
+## Experiments vs fixtures
+
+`test-fixtures/` is for **deterministic inputs** (curated property lists,
+saved HTML used by offline tests). `experiments/<date>/` is for **runtime
+outputs** of one run, captured for inspection. Re-running discovery or
+detail extraction will produce different numbers; do not treat experiment
+outputs as regression baselines. See e.g. `experiments/gdhotels_2026-05-10/README.md`.
+
+## CI
+
+`.github/workflows/ci.yml` runs on every push/PR:
+
+- `python -m compileall -q extractor` — syntax check the whole package
+- `python -m extractor.parser_smoke_test` — offline tests for
+  `parse_initial_state`, `parse_jsonld_hotel`, `_decode_bing_ck`. No
+  network, finishes in <1s.
+- `ruff check extractor` (best-effort, non-blocking)
+
+The 788KB live-listing fixture and the full `validate_offline.py` test
+are intentionally NOT in CI yet — they need the fixture to be committed
+or downloaded from a release artifact. Run them locally before shipping
+listing-extractor changes.
 
 ## Integration with cli-printing-press
 
