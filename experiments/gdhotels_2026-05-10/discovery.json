@@ -76,14 +76,19 @@
     "slug": "myspace-hotel-shree-vaibhav-nagpur",
     "name": "MySpace Hotel Shree Vaibhav",
     "name_searched": "MySpace Hotel Shree Vaibhav",
-    "candidates": []
+    "candidates": [
+      "https://www.makemytrip.com/hotels/myspace_hotel_shree_vaibhav-details-nagpur.html"
+    ]
   },
   {
     "brand_url": "https://www.myspacehotels.com/hotel/myspace-hotel-wonder-stay-brookfield",
     "slug": "myspace-hotel-wonder-stay-brookfield",
     "name": "MySpace Wonder Stay, Brookfield, Bengaluru",
     "name_searched": "MySpace Wonder Stay",
-    "candidates": []
+    "candidates": [
+      "https://www.makemytrip.com/hotels/myspace_hotel_wonder_stay-details-bangalore.html",
+      "https://www.makemytrip.com/hotels/rooms-in-myspace_hotel_wonder_stay-details-bangalore.html"
+    ]
   },
   {
     "brand_url": "https://www.myspacehotels.com/hotel/myspace-jagalur-mahalingappa-residency",
@@ -132,16 +137,16 @@
     "slug": "myspace-tattwa-grand",
     "name": "MySpace Tattwa Grand",
     "name_searched": "MySpace Tattwa Grand",
-    "candidates": [
-      "https://www.makemytrip.com/hotels/myspace_tattwa_grand-details-bangalore.html"
-    ]
+    "candidates": []
   },
   {
     "brand_url": "https://www.myspacehotels.com/hotel/myspace-triton-suits-hotel",
     "slug": "myspace-triton-suits-hotel",
     "name": "Myspace Triton Suits Hotel",
     "name_searched": "Myspace Triton Suits Hotel",
-    "candidates": []
+    "candidates": [
+      "https://www.makemytrip.com/hotels/amenities-of-myspace_triton_suites-details-bangalore.html"
+    ]
   },
   {
     "brand_url": "https://vybehotels.com/hotel/vybe-hotel-bidar",
