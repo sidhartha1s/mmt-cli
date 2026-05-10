@@ -118,11 +118,24 @@ def main() -> int:
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    session, profile = make_session()
-    session_started = time.monotonic()
-    print(f"using TLS profile: {profile}", file=sys.stderr)
-
     summary: list[dict] = []
+    blocked = False  # set True after a warmup rebuild fails — stop hammering
+    session = None
+    profile = None
+    startup_error: dict[str, Any] | None = None
+    session_started = time.monotonic()
+    try:
+        session, profile = make_session()
+        print(f"using TLS profile: {profile}", file=sys.stderr)
+    except Exception as e:
+        print(f"initial warmup failed: {e}", file=sys.stderr)
+        blocked = True
+        startup_error = {
+            "ts": _now_iso(),
+            "exception_class": type(e).__name__,
+            "exception_msg": str(e)[:300],
+            "stage": "initial_warmup",
+        }
     for i, r in enumerate(rows, 1):
         slug = r.get("slug") or f"row{i}"
         name = r.get("name")
@@ -138,6 +151,20 @@ def main() -> int:
                     "ts": _now_iso(),
                 }
             )
+            continue
+        if blocked:
+            print(f"[{i}/{len(rows)}] BLOCKED {slug} (egress hardened)")
+            entry: dict[str, Any] = {
+                "slug": slug,
+                "name": name,
+                "mmt_url": candidates[0],
+                "status": "blocked",
+                "error_class": "warmup_rebuild_failed",
+                "ts": _now_iso(),
+            }
+            if startup_error is not None:
+                entry["startup_error"] = startup_error
+            summary.append(entry)
             continue
 
         url = candidates[0]
@@ -158,20 +185,40 @@ def main() -> int:
                 state = parse_initial_state(html)
                 jsonld = parse_jsonld_hotel(html)
                 if state or jsonld:
-                    record = build_record(url, state or {}, jsonld)
-                    attempts.append(attempt)
-                    break
-                error_class = "parse_failed"
+                    candidate = build_record(url, state or {}, jsonld)
+                    if candidate.get("name") or candidate.get("hotelId"):
+                        record = candidate
+                        attempts.append(attempt)
+                        break
+                    # Page parsed but yielded no hotel identity — likely a
+                    # non-detail subpage (e.g. ``amenities-of-`` interstitial).
+                    error_class = "empty_record"
+                else:
+                    error_class = "parse_failed"
             else:
                 error_class = _classify(attempt["status"] or 0, body)
 
             attempts.append(attempt)
             if retry == 0 and error_class in {"akamai_sentinel", "short_body"}:
                 print(f"  {error_class}, rebuilding session...", file=sys.stderr)
-                session, profile = make_session()
-                session_started = time.monotonic()
-                print(f"  new TLS profile: {profile}", file=sys.stderr)
-                continue
+                try:
+                    session, profile = make_session()
+                    session_started = time.monotonic()
+                    print(f"  new TLS profile: {profile}", file=sys.stderr)
+                    continue
+                except Exception as e:
+                    print(f"  warmup rebuild failed: {e}", file=sys.stderr)
+                    error_class = "warmup_rebuild_failed"
+                    attempts.append(
+                        {
+                            "ts": _now_iso(),
+                            "exception_class": type(e).__name__,
+                            "exception_msg": str(e)[:300],
+                            "retry": retry + 1,
+                            "profile": profile,
+                        }
+                    )
+                    blocked = True
             break
 
         warmup_ok = _check_warmup(session)
