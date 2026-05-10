@@ -212,11 +212,42 @@ in-house) holds. Three realistic paths remain when this matters:
 The chosen path: stay with the listing-only MVP. Detail-page work is
 parked behind a documented blocker, not pretended-resolved.
 
+## Detail-page revisit — Playwright path works when curl_cffi doesn't (2026-05-11)
+
+After the 2026-05-09 verdict above, we made one more pass on detail
+extraction once the egress was no longer in hard-throttle. Two fetchers,
+same parser, same warmup chain (`/` → `/hotels/`):
+
+| Fetcher | Speed | Result on gdhotels.in seed (6 candidate URLs) |
+|---------|-------|-----------------------------------------------|
+| `batch_detail.py` (curl_cffi, chrome110/safari17_0) | ~1s/row | 1/6 on 2026-05-10; 0/6 next day after egress re-hardened (HTTP/2 INTERNAL_ERROR on warmup) |
+| `batch_detail_pw.py` (Playwright Firefox + en-IN locale) | ~6s/row | 5/6 on 2026-05-11 — full `parse_initial_state` + `parse_jsonld_hotel` records extracted |
+
+The 1 miss in the Playwright run was Triton Suites — its discovered URL
+was an `amenities-of-…` interstitial, not a real detail page. Classifier
+correctly flagged it `empty_record`; that's a discovery-side bug, not an
+extraction failure.
+
+**What this means for the verdict above:** the "all blocked" outcome
+was egress-state-specific, not a permanent ceiling. Playwright with the
+production warmup chain reproduces the listing-extractor's success
+pattern on detail pages too — the listing page being SSR-rendered isn't
+unique; detail pages are also SSR'd, the gate is just stricter. curl_cffi
+TLS-impersonation works when fresh and dies first when Akamai hardens
+the egress; the Firefox tab path takes longer to fall over.
+
+Both paths are still **research-tier**, not production. Akamai can still
+block Playwright sessions when the egress is sufficiently flagged
+(symptoms: DOM stays under 500KB, `_abck` at ~531b). Recovery is
+unchanged — cool down or change egress.
+
 ## What we'd build next if we kept going
 
-- **Detail-page enrichment.** The listing card has `hotelId`; a second
-  pass against `?hotelId=...` could pull amenities, room types, full
-  policy text. Same Akamai gate, same DOM-scrape technique.
+- **Detail-page enrichment.** Research-tier scaffolding now exists
+  (`mmt_detail.py`, `batch_detail.py`, `batch_detail_pw.py`). To
+  productionize: discovery recall (currently ~25–30% on small chains),
+  egress hardening (residential proxy or commercial backstop), and a
+  retry/cooldown policy that doesn't keep hammering a flagged IP.
 - **Multi-page pagination.** Current extractor stops at whatever
   renders on the first page. MMT shows ~30 cards per page; lazy-load
   triggers more on scroll. We trigger some lazy renders but not all.

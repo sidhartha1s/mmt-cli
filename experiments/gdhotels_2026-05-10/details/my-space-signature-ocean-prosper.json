@@ -1,0 +1,528 @@
+{
+  "url": "https://www.makemytrip.com/hotels/ocean_prosper_by_ilif_hotels-details-alibaug.html",
+  "hotelId": "202405130017462935",
+  "name": "Ocean Prosper by iLif Hotels",
+  "starRating": 3.0,
+  "propertyType": "Hotel",
+  "checkinTime": "2 PM",
+  "checkoutTime": "10 AM",
+  "lat": 18.605286,
+  "lng": 72.90093,
+  "pinCode": "402204",
+  "address": {
+    "line1": "3428 Nagaon bandar alibaug alibaug Raigad Nagaon",
+    "city": "Alibaug",
+    "postalCode": "402204",
+    "country": "IN"
+  },
+  "shortDesc": "Hotel Ocean Prosper offers luxury A/C rooms with balconies, a serene swimming pool, and a multi-cuisine restaurant. Just 500 met ",
+  "longDesc": "<p>Hotel Ocean Prosper offers luxury A/C rooms with balconies, a serene swimming pool, and a multi-cuisine restaurant. Just 500 meters from Nagaon Beach perfect for family vacations and couples. The nearest airport is Chhatrapati Shivaji International Mumbai Airport, 96 km from the Hotel</p>\r\n",
+  "rating": 4.1,
+  "reviewCount": 296.0,
+  "ratingBreakup": {
+    "1": 20.0,
+    "2": 33.0,
+    "3": 73.0,
+    "4": 115.0,
+    "5": 230.0
+  },
+  "amenities": [
+    {
+      "name": "Indoor Games",
+      "code": "INENTMNT",
+      "category": "Highlighted Amenities",
+      "subText": "(Board Games,Carrom Board)"
+    },
+    {
+      "name": "Restaurant",
+      "code": "RSTRNT",
+      "category": "Highlighted Amenities",
+      "subText": "(Halal)"
+    },
+    {
+      "name": "Butler Services",
+      "code": "BTLRSVC",
+      "category": "Highlighted Amenities",
+      "subText": "(For each floor)"
+    },
+    {
+      "name": "LAN",
+      "code": "INTRNT",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Power Backup",
+      "code": "PWRBCKUP",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Housekeeping",
+      "code": "HKPNG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Room Service",
+      "code": "RMSVC",
+      "category": "Basic Facilities",
+      "subText": "(Limited duration)"
+    },
+    {
+      "name": "Air Conditioning",
+      "code": "AC",
+      "category": "Basic Facilities",
+      "subText": "(Room controlled)"
+    },
+    {
+      "name": "Parking",
+      "code": "PRKG",
+      "category": "Basic Facilities",
+      "subText": "(Free - Onsite)"
+    },
+    {
+      "name": "Laundry Service",
+      "code": "LNDRY",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Elevator/Lift",
+      "code": "ELVTR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Concierge",
+      "code": "TRASST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Luggage Assistance",
+      "code": "LGAST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Doctor on Call",
+      "code": "DOCONCALL",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Caretaker",
+      "code": "CRTKR",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Facilities for Guests with Disabilities",
+      "code": "SPECABLASS",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Wheelchair",
+      "code": "WHLCH",
+      "category": "General Services",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Multilingual Staff",
+      "code": "MLTSTF",
+      "category": "General Services",
+      "subText": "(English)"
+    },
+    {
+      "name": "First-aid Services",
+      "code": "FIRSTAID",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Iron/Ironing Board",
+      "code": "IRONBRD",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Geyser/Water Heater",
+      "code": "GEYSER",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Mineral Water",
+      "code": "MNRLWTR",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Balcony",
+      "code": "BLCNY",
+      "category": "Room Amenities",
+      "subText": "(Private)"
+    },
+    {
+      "name": "Toiletries",
+      "code": "TOILTRIES",
+      "category": "Room Amenities",
+      "subText": "(Shampoo,Soap)"
+    },
+    {
+      "name": "Dining Area",
+      "code": "DINING",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Indian Veg Food",
+      "code": "BRKFST",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Indian Chef",
+      "code": "INDCHF",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "CCTV",
+      "code": "CCTVSUR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Fire Extinguishers",
+      "code": "FIREXTNGSHR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security alarms",
+      "code": "SECLRM",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security Guard",
+      "code": "SECGAU",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Music System",
+      "code": "MUSSYS",
+      "category": "Entertainment",
+      "subText": null
+    },
+    {
+      "name": "TV",
+      "code": "TELEVISION",
+      "category": "Media and technology",
+      "subText": "(LED)"
+    },
+    {
+      "name": "Board Games",
+      "code": "BOARDG",
+      "category": "Indoor Activities and Sports",
+      "subText": null
+    },
+    {
+      "name": "Living Room",
+      "code": "LVRM",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Reception",
+      "code": "RECEPT",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Food Options Available",
+      "code": "Food Options Available",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Badminton",
+      "code": "Badminton",
+      "category": "Other Facilities",
+      "subText": null
+    }
+  ],
+  "highlightedAmenities": [
+    "Indoor Games",
+    "Restaurant",
+    "Butler Services",
+    "LAN",
+    "Power Backup",
+    "Housekeeping"
+  ],
+  "rooms": [
+    {
+      "roomCode": "782348502",
+      "roomName": "Nature View Couple Room With Balcony (2Person)",
+      "maxGuest": 4.0,
+      "roomSize": "150 sq.ft",
+      "roomViewName": "Forest View",
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 16
+    }
+  ],
+  "image": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202405130017462935-c4c248f9-928b-4484-b5d2-43481639430e.jpg",
+  "houseRules": {
+    "commonRules": [
+      {
+        "category": "Guest Profile",
+        "id": "GuestProfile",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Primary guest should be atleast 18 years of age",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Groups with only male guests are also allowed at the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": true,
+        "expandRules": false,
+        "categoryId": 1.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "ID Proof Related",
+        "id": "IDProofRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Local ids are allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 13.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Smoking/Alcohol consumption Rules",
+        "id": "SmokingAlcoholconsumptionRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "There are no restrictions on alcohol consumption.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Smoking within the premises is allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 3.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Property Accessibility",
+        "id": "PropertyAccessibility",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "This property is not accessible to guests who use a wheelchair. Please make arrangements accordingly.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 12.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Pet(s) Related",
+        "id": "PetsRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Pets are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "There are no pets living on the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 7.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Other Rules",
+        "id": "OtherRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Does not allow private parties or events",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Guests are requested not to invite outside visitors in the room during their stay.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 10.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Infant Policy",
+        "id": "InfantPolicy",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "1 infant (0-2 yrs) per room included without counting in total room capacity",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 28.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      }
+    ],
+    "childExtraBedPolicy": {
+      "policyInfo": "No extra bed will be provided to accommodate any child included in the booking.",
+      "label": "Child Extra Bed Policy",
+      "id": "ChildExtraBedPolicy",
+      "paid": true
+    },
+    "extraBedPolicyList": [
+      {
+        "policyInfo": "No extra bed will be provided to accommodate any child included in the booking.",
+        "label": "Child Extra Bed Policy",
+        "id": "ChildExtraBedPolicy",
+        "paid": true
+      },
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any additional guest included in the booking for a charge mentioned below.",
+        "policyRules": [
+          {
+            "extraBedTerms": [
+              {
+                "value": "INR 1500 will be charged for an extra mattress per guest. (To be paid at the property)"
+              }
+            ]
+          }
+        ],
+        "label": "Adult Extra Bed Policy",
+        "id": "AdultExtraBedPolicy",
+        "paid": true
+      }
+    ],
+    "contextRules": {
+      "category": "Couple Friendly",
+      "title": "Couple, Bachelor Rules",
+      "desc": "Unmarried couples/guests with Local IDs are allowed.",
+      "tag": "Couple Friendly",
+      "ruleIcon": "https://promos.makemytrip.com/Hotels_product/Details/Couplefriendly2x.png"
+    },
+    "mustReadRules": {
+      "category": "Must Read Rules",
+      "id": "restrictions",
+      "showInHost": false,
+      "rules": [
+        {
+          "text": "Primary Guest should be atleast 18 years of age."
+        },
+        {
+          "text": "Groups with only male guests are also allowed at the property"
+        },
+        {
+          "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)"
+        },
+        {
+          "text": "Pets are not allowed"
+        },
+        {
+          "text": "Outside food is not allowed"
+        }
+      ],
+      "showInDetailHome": true,
+      "expandRules": true,
+      "showInL2Page": true,
+      "showArrowInDetailHome": true
+    }
+  },
+  "locationDetail": {
+    "id": "CTXGH",
+    "name": "Alibaug",
+    "type": "city",
+    "countryId": "IN",
+    "countryName": "India"
+  }
+}

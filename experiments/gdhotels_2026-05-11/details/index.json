@@ -1,0 +1,198 @@
+[
+  {
+    "slug": "my-space-express-balaji-paradise",
+    "name": "My Space Express Balaji Paradise",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "my-space-express-pushap-villa",
+    "name": "My Space Express Pushap Villa Katra",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "my-space-signature-ocean-prosper",
+    "name": "My Space Signature Ocean Prosper Alibag, Maharashtra",
+    "mmt_url": "https://www.makemytrip.com/hotels/ocean_prosper_by_ilif_hotels-details-alibaug.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  },
+  {
+    "slug": "myspace-banari-residency",
+    "name": "MySpace Banari Residency",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-chindanur-chitradurga",
+    "name": "MySpace Chindanur Chitradurga",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-express-aalaya",
+    "name": "MySpace Express Aalaya, Manali",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-express-astar-amritsar",
+    "name": "MySpace Express A-Star Amritsar",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-express-balaji-residency",
+    "name": "MySpace Express Balaji Residency",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-forest-keys-bengaluru",
+    "name": "MySpace Forest Keys",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-gd-inn-indiranagar-bangalore",
+    "name": "MySpace GD Inn, Indiranagar, Bangalore",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-hotel-shree-vaibhav-nagpur",
+    "name": "MySpace Hotel Shree Vaibhav",
+    "mmt_url": "https://www.makemytrip.com/hotels/myspace_hotel_shree_vaibhav-details-nagpur.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  },
+  {
+    "slug": "myspace-hotel-wonder-stay-brookfield",
+    "name": "MySpace Wonder Stay, Brookfield, Bengaluru",
+    "mmt_url": "https://www.makemytrip.com/hotels/myspace_hotel_wonder_stay-details-bangalore.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  },
+  {
+    "slug": "myspace-jagalur-mahalingappa-residency",
+    "name": "MySpace Jagalur Mahalingappa Residency, Chitradurga",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-kadison-davanagere",
+    "name": "My Space Kadison Davanagere",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-kenilworth",
+    "name": "MySpace Kenilworth Vishakhapatnam, Andra Pradesh",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-ravenkar-comforts",
+    "name": "MySpace Ravenkar Comforts",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-saroja-suitees-kalaburagi",
+    "name": "MySpace Saroja Suitees Kalaburagi",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-silverstar-gandhinagar-bengaluru",
+    "name": "MySpace Silverstar Gandhinagar, Bengaluru",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-tattwa-grand",
+    "name": "MySpace Tattwa Grand",
+    "mmt_url": null,
+    "status": "no_candidate",
+    "ts": "2026-05-10T18:50:48+00:00"
+  },
+  {
+    "slug": "myspace-triton-suits-hotel",
+    "name": "Myspace Triton Suits Hotel",
+    "mmt_url": "https://www.makemytrip.com/hotels/amenities-of-myspace_triton_suites-details-bangalore.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  },
+  {
+    "slug": "vybe-hotel-bidar",
+    "name": "Vybe Hotel Bidar",
+    "mmt_url": "https://www.makemytrip.com/hotels/mastiff_select_bidar-details-bidar.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  },
+  {
+    "slug": "ezzenza-swarg-by-beas-golf-resort",
+    "name": "Ezzenza Swarg by Beas Golf Resort",
+    "mmt_url": "https://www.makemytrip.com/hotels/hotel_devlok_himachal_swarg_by_beas_your_gateway_to_heaven-details-manali.html",
+    "status": "blocked",
+    "error_class": "warmup_rebuild_failed",
+    "ts": "2026-05-10T18:50:48+00:00",
+    "startup_error": {
+      "ts": "2026-05-10T18:50:48+00:00",
+      "exception_class": "RuntimeError",
+      "exception_msg": "All impersonation profiles failed warm-up: ['chrome110', 'safari17_0']: GET https://www.makemytrip.com/ failed after 3 retries: Failed to perform, curl: (92) HTTP/2 stream 5 was not closed cleanly: INTERNAL_ERROR (err 2). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "stage": "initial_warmup"
+    }
+  }
+]

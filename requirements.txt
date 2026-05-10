@@ -1,0 +1,9 @@
+# Listing extractor (production path)
+playwright>=1.45
+playwright-stealth>=2.0
+
+# Detail extractor + URL discovery (experimental)
+# curl_cffi provides Chrome/Safari TLS fingerprint impersonation, used
+# by the detail-page extractor to bypass Akamai Bot Manager and by
+# discover_urls.py for Bing/DDG search.
+curl_cffi>=0.7

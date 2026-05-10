@@ -1,0 +1,25 @@
+warming up (firefox)...
+[1/22] SKIP my-space-express-balaji-paradise (no candidates)
+[2/22] SKIP my-space-express-pushap-villa (no candidates)
+[3/22] OK   my-space-signature-ocean-prosper         → 'Ocean Prosper by iLif Hotels' (202405130017462935)
+[4/22] SKIP myspace-banari-residency (no candidates)
+[5/22] SKIP myspace-chindanur-chitradurga (no candidates)
+[6/22] SKIP myspace-express-aalaya (no candidates)
+[7/22] SKIP myspace-express-astar-amritsar (no candidates)
+[8/22] SKIP myspace-express-balaji-residency (no candidates)
+[9/22] SKIP myspace-forest-keys-bengaluru (no candidates)
+[10/22] SKIP myspace-gd-inn-indiranagar-bangalore (no candidates)
+[11/22] OK   myspace-hotel-shree-vaibhav-nagpur       → 'Myspace Hotel Shree Vaibhav' (201201121320188345)
+[12/22] OK   myspace-hotel-wonder-stay-brookfield     → 'Myspace Hotel Wonder Stay' (202507151426448504)
+[13/22] SKIP myspace-jagalur-mahalingappa-residency (no candidates)
+[14/22] SKIP myspace-kadison-davanagere (no candidates)
+[15/22] SKIP myspace-kenilworth (no candidates)
+[16/22] SKIP myspace-ravenkar-comforts (no candidates)
+[17/22] SKIP myspace-saroja-suitees-kalaburagi (no candidates)
+[18/22] SKIP myspace-silverstar-gandhinagar-bengaluru (no candidates)
+[19/22] SKIP myspace-tattwa-grand (no candidates)
+[20/22] ERR  myspace-triton-suits-hotel: empty_record size=388194
+[21/22] OK   vybe-hotel-bidar                         → 'Mastiff Select Bidar' (202206251732036038)
+[22/22] OK   ezzenza-swarg-by-beas-golf-resort        → 'Hotel Devlok Himachal Swarg By Beas - Your Gateway to Heaven' (202403312231516843)
+
+Extracted 5/22 → experiments/gdhotels_2026-05-11_pw/details/

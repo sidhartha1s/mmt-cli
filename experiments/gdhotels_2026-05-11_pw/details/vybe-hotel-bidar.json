@@ -1,0 +1,619 @@
+{
+  "url": "https://www.makemytrip.com/hotels/mastiff_select_bidar-details-bidar.html",
+  "hotelId": "202206251732036038",
+  "name": "Mastiff Select Bidar",
+  "starRating": 4.0,
+  "propertyType": "Hotel",
+  "checkinTime": "12 PM",
+  "checkoutTime": "12 PM",
+  "lat": 17.933393,
+  "lng": 77.515816,
+  "pinCode": "585401",
+  "address": {
+    "line1": "No. 7-7, 439/A, Janwada Rd, Nawadgeri, Bidar, Karnataka 585401",
+    "city": "Bidar",
+    "postalCode": "585401",
+    "country": "IN"
+  },
+  "shortDesc": "The informal rooms come with hard tiles floors and free Wi-Fi, flat-screen TVs ,and tea and coffee making facilities. Upgraded r ",
+  "longDesc": "<p>The informal rooms come with hard tiles floors and free Wi-Fi, flat-screen TVs ,and tea and coffee making facilities. Upgraded rooms add living areas. There's complimentary breakfast and Fitness Center,l and free parking,.</p>\n",
+  "rating": 4.1,
+  "reviewCount": 100.0,
+  "ratingBreakup": {
+    "1": 15.0,
+    "2": 11.0,
+    "3": 22.0,
+    "4": 82.0,
+    "5": 132.0
+  },
+  "amenities": [
+    {
+      "name": "Restaurant",
+      "code": "RSTRNT",
+      "category": "Highlighted Amenities",
+      "subText": "(Halal,Kosher)"
+    },
+    {
+      "name": "Bar",
+      "code": "BAR",
+      "category": "Highlighted Amenities",
+      "subText": null
+    },
+    {
+      "name": "Smoking Rooms",
+      "code": "SMKEROOM",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Power Backup",
+      "code": "PWRBCKUP",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Elevator/Lift",
+      "code": "ELVTR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Housekeeping",
+      "code": "HKPNG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Newspaper",
+      "code": "NEWSPAPR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Umbrellas",
+      "code": "UMBRELLA",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Room Service",
+      "code": "RMSVC",
+      "category": "Basic Facilities",
+      "subText": "(Limited duration)"
+    },
+    {
+      "name": "Smoke Detector",
+      "code": "SMKDTCTR",
+      "category": "Basic Facilities",
+      "subText": "(In Room,Lobby)"
+    },
+    {
+      "name": "Parking",
+      "code": "PRKG",
+      "category": "Basic Facilities",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Laundry Service",
+      "code": "LNDRY",
+      "category": "Basic Facilities",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Air Conditioning",
+      "code": "AC",
+      "category": "Basic Facilities",
+      "subText": "(Room controlled)"
+    },
+    {
+      "name": "Wi-Fi",
+      "code": "INTRNT",
+      "category": "Basic Facilities",
+      "subText": "(Free - Speed Suitable for working)"
+    },
+    {
+      "name": "Concierge",
+      "code": "TRASST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Luggage Assistance",
+      "code": "LGAST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Wheelchair",
+      "code": "WHLCH",
+      "category": "General Services",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Multilingual Staff",
+      "code": "MLTSTF",
+      "category": "General Services",
+      "subText": "(Bengali,English,Kannada,Malayalam,Telugu)"
+    },
+    {
+      "name": "First-aid Services",
+      "code": "FIRSTAID",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Airport Transfers",
+      "code": "AIRTRANS",
+      "category": "Transfers",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Hairdryer",
+      "code": "HRDRYR",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Mineral Water",
+      "code": "MNRLWTR",
+      "category": "Room Amenities",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Dental Kit",
+      "code": "DENTLKT",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Toiletries",
+      "code": "TOILTRIES",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Dining Area",
+      "code": "DINING",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Barbeque",
+      "code": "BBQ",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "CCTV",
+      "code": "CCTVSUR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Fire Extinguishers",
+      "code": "FIREXTNGSHR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security alarms",
+      "code": "SECLRM",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security Guard",
+      "code": "SECGAU",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Balcony/Terrace",
+      "code": "BALCTERR",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Outdoor Furniture",
+      "code": "OUTDOORFURN",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Garden",
+      "code": "GARDEN",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Reception",
+      "code": "RECEPT",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Printer",
+      "code": "PNTR",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Business Centre",
+      "code": "BUSNS",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Conference Room",
+      "code": "CNFRNCEROOM",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Banquet",
+      "code": "BNQTHALL",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Cloak Room",
+      "code": "Cloak Room",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Carbon Monoxide Detector",
+      "code": "Carbon Monoxide Detector",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Breakfast",
+      "code": "Breakfast",
+      "category": "Other Facilities",
+      "subText": null
+    }
+  ],
+  "highlightedAmenities": [
+    "Restaurant",
+    "Bar",
+    "Smoking Rooms",
+    "Power Backup",
+    "Elevator/Lift",
+    "Housekeeping"
+  ],
+  "rooms": [
+    {
+      "roomCode": "4382",
+      "roomName": "Premier",
+      "maxGuest": 3.0,
+      "roomSize": "320 sq.ft",
+      "roomViewName": null,
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features"
+      ],
+      "imageCount": 1
+    },
+    {
+      "roomCode": "210587",
+      "roomName": "Suite with Breakfast",
+      "maxGuest": 4.0,
+      "roomSize": "470 sq.ft",
+      "roomViewName": null,
+      "beds": [
+        {
+          "type": "Queen Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 5
+    },
+    {
+      "roomCode": "1230988",
+      "roomName": "Deluxe Double Or Twin Room",
+      "maxGuest": 3.0,
+      "roomSize": "240 sq.ft",
+      "roomViewName": null,
+      "beds": [
+        {
+          "type": "Queen Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 4
+    }
+  ],
+  "image": "https://r1imghtlak.mmtcdn.com/86b9e2c69dab11ee92550a58a9feac02.jfif",
+  "houseRules": {
+    "commonRules": [
+      {
+        "category": "Guest Profile",
+        "id": "GuestProfile",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Primary guest should be atleast 18 years of age",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Groups with only male guests are allowed at the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": true,
+        "expandRules": false,
+        "categoryId": 1.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Guest Profile (Hourly)",
+        "id": "GuestProfileHourly",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples are allowed in hourly stay rooms",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 21.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "ID Proof Related",
+        "id": "IDProofRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Local ids are allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 13.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Smoking/Alcohol consumption Rules",
+        "id": "SmokingAlcoholconsumptionRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "There are no restrictions on alcohol consumption.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Smoking within the premises is allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 3.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Property Accessibility",
+        "id": "PropertyAccessibility",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "This property is accessible to guests who use a wheelchair. Guests are requested to carry their own wheelchair. ",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 12.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Pet(s) Related",
+        "id": "PetsRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Pets are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "There are no pets living on the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 7.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Other Rules",
+        "id": "OtherRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Allows private parties or events",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 10.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Infant Policy",
+        "id": "InfantPolicy",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "1 infant (0-2 yrs) per room included without counting in total room capacity",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 28.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      }
+    ],
+    "childExtraBedPolicy": {
+      "policyInfo": "An extra bed will be provided to accommodate any child included in the booking for a charge mentioned below.",
+      "policyRules": [
+        {
+          "extraBedTerms": [
+            {
+              "value": "INR 1500 will be charged for an extra mattress per child. (To be paid at the property)"
+            }
+          ]
+        }
+      ],
+      "label": "Child Extra Bed Policy",
+      "id": "ChildExtraBedPolicy",
+      "paid": true
+    },
+    "extraBedPolicyList": [
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any child included in the booking for a charge mentioned below.",
+        "policyRules": [
+          {
+            "extraBedTerms": [
+              {
+                "value": "INR 1500 will be charged for an extra mattress per child. (To be paid at the property)"
+              }
+            ]
+          }
+        ],
+        "label": "Child Extra Bed Policy",
+        "id": "ChildExtraBedPolicy",
+        "paid": true
+      },
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any additional guest included in the booking for a charge mentioned below.",
+        "policyRules": [
+          {
+            "extraBedTerms": [
+              {
+                "value": "INR 1500 will be charged for an extra mattress per guest. (To be paid at the property)"
+              }
+            ]
+          }
+        ],
+        "label": "Adult Extra Bed Policy",
+        "id": "AdultExtraBedPolicy",
+        "paid": true
+      }
+    ],
+    "contextRules": {
+      "category": "Couple Friendly",
+      "title": "Couple, Bachelor Rules",
+      "desc": "Unmarried couples/guests with Local IDs are allowed.",
+      "tag": "Couple Friendly",
+      "ruleIcon": "https://promos.makemytrip.com/Hotels_product/Details/Couplefriendly2x.png"
+    },
+    "mustReadRules": {
+      "category": "Must Read Rules",
+      "id": "restrictions",
+      "showInHost": false,
+      "rules": [
+        {
+          "text": "Primary Guest should be atleast 18 years of age."
+        },
+        {
+          "text": "Groups with only male guests are allowed at the property"
+        },
+        {
+          "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)"
+        },
+        {
+          "text": "Pets are not allowed"
+        },
+        {
+          "text": "Outside food is not allowed"
+        }
+      ],
+      "showInDetailHome": true,
+      "expandRules": true,
+      "showInL2Page": true,
+      "showArrowInDetailHome": true
+    }
+  },
+  "locationDetail": {
+    "id": "CTBID",
+    "name": "Bidar",
+    "type": "city",
+    "countryId": "IN",
+    "countryName": "India"
+  }
+}

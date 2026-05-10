@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile-check all extractor modules
+        run: python -m compileall -q extractor
+
+      - name: Parser smoke-test (offline, no network)
+        run: python -m extractor.parser_smoke_test
+
+      - name: Lint (best-effort, non-blocking)
+        run: |
+          pip install ruff
+          ruff check extractor || true
