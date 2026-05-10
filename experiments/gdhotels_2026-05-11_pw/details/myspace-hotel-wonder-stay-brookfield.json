@@ -1,0 +1,465 @@
+{
+  "url": "https://www.makemytrip.com/hotels/myspace_hotel_wonder_stay-details-bangalore.html",
+  "hotelId": "202507151426448504",
+  "name": "Myspace Hotel Wonder Stay",
+  "starRating": 0.0,
+  "propertyType": "Hotel",
+  "checkinTime": "12 PM",
+  "checkoutTime": "11 AM",
+  "lat": 12.964374,
+  "lng": 77.71508,
+  "pinCode": "560037",
+  "address": {
+    "line1": "Building No./Flat No.: 595\r\nName Of Premises/Building: s k Arcade\r\nRoad/Street: 1st Main Road\r\nNearby Landmark: Incubes Company\r\nLocality/Sub Locality: Kundalhalli\r\nCity/Town/Village: Bengaluru\r\nDistrict: Bengaluru Urban\r\nState: Karnataka\r\nPIN Code",
+    "city": "Bangalore",
+    "postalCode": "560037",
+    "country": "IN"
+  },
+  "shortDesc": "",
+  "longDesc": "",
+  "rating": 4.2,
+  "reviewCount": 7.0,
+  "ratingBreakup": {
+    "1": 1.0,
+    "3": 6.0,
+    "4": 5.0,
+    "5": 13.0
+  },
+  "amenities": [
+    {
+      "name": "Smoking Rooms",
+      "code": "SMKEROOM",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Laundry Service",
+      "code": "LNDRY",
+      "category": "Basic Facilities",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Air Conditioning",
+      "code": "AC",
+      "category": "Basic Facilities",
+      "subText": "(Room controlled)"
+    },
+    {
+      "name": "Newspaper",
+      "code": "NEWSPAPR",
+      "category": "Basic Facilities",
+      "subText": "(English,Local Language)"
+    },
+    {
+      "name": "Parking",
+      "code": "PRKG",
+      "category": "Basic Facilities",
+      "subText": "(Free - Onsite)"
+    },
+    {
+      "name": "Wi-Fi",
+      "code": "INTRNT",
+      "category": "Basic Facilities",
+      "subText": "(Free - Speed Suitable for working)"
+    },
+    {
+      "name": "Room Service",
+      "code": "RMSVC",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Power Backup",
+      "code": "PWRBCKUP",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Elevator/Lift",
+      "code": "ELVTR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Housekeeping",
+      "code": "HKPNG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Luggage Assistance",
+      "code": "LGAST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "First-aid Services",
+      "code": "FIRSTAID",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Airport Transfers",
+      "code": "AIRTRANS",
+      "category": "Transfers",
+      "subText": "(Paid - Private taxi)"
+    },
+    {
+      "name": "Sofa",
+      "code": "SOFA",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Dental Kit",
+      "code": "DENTLKT",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Iron/Ironing Board",
+      "code": "IRONBRD",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Mini Fridge",
+      "code": "MNFRRDGE",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Geyser/Water Heater",
+      "code": "GEYSER",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Work Desk",
+      "code": "WORKDESK",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Mineral Water",
+      "code": "MNRLWTR",
+      "category": "Room Amenities",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Toiletries",
+      "code": "TOILTRIES",
+      "category": "Room Amenities",
+      "subText": "(Comb,Conditioner,Shampoo,Shower Gel,Soap)"
+    },
+    {
+      "name": "CCTV",
+      "code": "CCTVSUR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Fire Extinguishers",
+      "code": "FIREXTNGSHR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Reception",
+      "code": "RECEPT",
+      "category": "Common Area",
+      "subText": "(24 hours)"
+    }
+  ],
+  "highlightedAmenities": [
+    "Smoking Rooms",
+    "Laundry Service",
+    "Air Conditioning",
+    "Newspaper",
+    "Parking",
+    "Wi-Fi"
+  ],
+  "rooms": [
+    {
+      "roomCode": "20634179",
+      "roomName": "Premium Room With City View",
+      "maxGuest": 4.0,
+      "roomSize": "280 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "Queen Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "DEFAULT"
+      ],
+      "imageCount": 6
+    },
+    {
+      "roomCode": "28575070",
+      "roomName": "Standard Room With Twin Bed",
+      "maxGuest": 3.0,
+      "roomSize": "240 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "Single Bed(s)",
+          "count": 2.0
+        }
+      ],
+      "amenities": [
+        "DEFAULT"
+      ],
+      "imageCount": 4
+    },
+    {
+      "roomCode": "246026014",
+      "roomName": "Standard Room With Twin Bed (Hourly)",
+      "maxGuest": 3.0,
+      "roomSize": "240 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "Single Bed(s)",
+          "count": 2.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 4
+    },
+    {
+      "roomCode": "1298406691",
+      "roomName": "Deluxe Room With City View",
+      "maxGuest": 4.0,
+      "roomSize": "260 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "Queen Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "DEFAULT"
+      ],
+      "imageCount": 4
+    }
+  ],
+  "image": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202507151426448504-1fb7f292-0708-4245-98a1-c1abdaffe38b.jpg",
+  "houseRules": {
+    "commonRules": [
+      {
+        "category": "Guest Profile",
+        "id": "GuestProfile",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Primary guest should be atleast 18 years of age",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Groups with only male guests are allowed at the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": true,
+        "expandRules": false,
+        "categoryId": 1.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Guest Profile (Hourly)",
+        "id": "GuestProfileHourly",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples are allowed in hourly stay rooms",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 21.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "ID Proof Related",
+        "id": "IDProofRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Local ids are allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 13.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Smoking/Alcohol consumption Rules",
+        "id": "SmokingAlcoholconsumptionRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Smoking within the premises is allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 3.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Property Accessibility",
+        "id": "PropertyAccessibility",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "This property is accessible to guests who use a wheelchair. Guests are requested to carry their own wheelchair. ",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 12.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Pet(s) Related",
+        "id": "PetsRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Pets are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "There are no pets living on the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 7.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Other Rules",
+        "id": "OtherRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Allows private parties or events",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 10.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      }
+    ],
+    "childExtraBedPolicy": {
+      "policyInfo": "An extra bed will be provided to accommodate any additional guest included in the booking for a charge mentioned below.",
+      "label": "Adult Extra Bed Policy",
+      "id": "AdultExtraBedPolicy",
+      "paid": true
+    },
+    "extraBedPolicyList": [
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any additional guest included in the booking for a charge mentioned below.",
+        "label": "Adult Extra Bed Policy",
+        "id": "AdultExtraBedPolicy",
+        "paid": true
+      }
+    ],
+    "contextRules": {
+      "category": "Couple Friendly",
+      "title": "Couple, Bachelor Rules",
+      "desc": "Unmarried couples/guests with Local IDs are allowed.",
+      "tag": "Couple Friendly",
+      "ruleIcon": "https://promos.makemytrip.com/Hotels_product/Details/Couplefriendly2x.png"
+    },
+    "mustReadRules": {
+      "category": "Must Read Rules",
+      "id": "restrictions",
+      "showInHost": false,
+      "rules": [
+        {
+          "text": "Primary Guest should be atleast 18 years of age."
+        },
+        {
+          "text": "Groups with only male guests are allowed at the property"
+        },
+        {
+          "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)"
+        },
+        {
+          "text": "Pets are not allowed"
+        }
+      ],
+      "showInDetailHome": true,
+      "expandRules": true,
+      "showInL2Page": true,
+      "showArrowInDetailHome": true
+    }
+  },
+  "locationDetail": {
+    "id": "CTBLR",
+    "name": "Bangalore",
+    "type": "city",
+    "countryId": "IN",
+    "countryName": "India"
+  }
+}

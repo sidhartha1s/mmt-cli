@@ -1,0 +1,781 @@
+{
+  "url": "https://www.makemytrip.com/hotels/hotel_devlok_himachal_swarg_by_beas_your_gateway_to_heaven-details-manali.html",
+  "hotelId": "202403312231516843",
+  "name": "Hotel Devlok Himachal Swarg By Beas - Your Gateway to Heaven",
+  "starRating": 5.0,
+  "propertyType": "Resort",
+  "checkinTime": "2 PM",
+  "checkoutTime": "11 AM",
+  "lat": 32.137638,
+  "lng": 77.1567,
+  "pinCode": "175129",
+  "address": {
+    "line1": "Village Badagran, Kullu, Manali, Himachal Pradesh 175130",
+    "city": "Manali",
+    "postalCode": "175129",
+    "country": "IN"
+  },
+  "shortDesc": "Location:Escape to a world of luxury and natural beauty at the one-of-a-kind Boutique Hotel. This stunning resort is nestled in  ",
+  "longDesc": "<p><strong>Location:</strong>Escape to a world of luxury and natural beauty at the one-of-a-kind Boutique Hotel. This stunning resort is nestled in the majestic Himalayan Mountains, overlooking sprawling green fairways and the serene Beas River. Designed for discerning travelers who appreciate nature, activities, and indulgence, the Boutique Hotel makes for an unforgettable getaway in one of the worlds most beautiful regions. This is hospitality at its finest. In the evenings, gather with loved ones to toast the good life while taking in a breathtaking Himalayan sunset. Whether you seek adventure, indulgence, or serenity, this resort delivers it all. Treat yourself to an escape where luxury meets nature at the one-and-only Boutique Hotel. At Ezzenza Swarg By The Beas at DevLok, we pride ourselves on providing impeccable service tailored to your every need. Our dedicated staff is committed to ensuring your stay exceeds expectations, from arranging personalized excursions to attending to every detail of your comfort and convenience.</p>",
+  "rating": 3.9,
+  "reviewCount": 11.0,
+  "ratingBreakup": {
+    "1": 1.0,
+    "2": 2.0,
+    "3": 2.0,
+    "4": 5.0,
+    "5": 7.0
+  },
+  "amenities": [
+    {
+      "name": "Parking",
+      "code": "PRKG",
+      "category": "Amenities for Couples",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Indoor Games",
+      "code": "INENTMNT",
+      "category": "Amenities for Couples",
+      "subText": "(Board Games,Carrom Board,Pool Table,Table tennis)"
+    },
+    {
+      "name": "Restaurant",
+      "code": "RSTRNT",
+      "category": "Amenities for Couples",
+      "subText": null
+    },
+    {
+      "name": "Smoking Rooms",
+      "code": "SMKEROOM",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Power Backup",
+      "code": "PWRBCKUP",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Refrigerator",
+      "code": "REFRIG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Housekeeping",
+      "code": "HKPNG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Umbrellas",
+      "code": "UMBRELLA",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Room Service",
+      "code": "RMSVC",
+      "category": "Basic Facilities",
+      "subText": "(Limited duration)"
+    },
+    {
+      "name": "Laundry Service",
+      "code": "LNDRY",
+      "category": "Basic Facilities",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Air Conditioning",
+      "code": "AC",
+      "category": "Basic Facilities",
+      "subText": "(Room controlled)"
+    },
+    {
+      "name": "LAN",
+      "code": "INTRNT",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Smoke Detector",
+      "code": "SMKDTCTR",
+      "category": "Basic Facilities",
+      "subText": "(In Room)"
+    },
+    {
+      "name": "Elevator/Lift",
+      "code": "ELVTR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Concierge",
+      "code": "TRASST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Luggage Assistance",
+      "code": "LGAST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Doctor on Call",
+      "code": "DOCONCALL",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Facilities for Guests with Disabilities",
+      "code": "SPECABLASS",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Wheelchair",
+      "code": "WHLCH",
+      "category": "General Services",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Multilingual Staff",
+      "code": "MLTSTF",
+      "category": "General Services",
+      "subText": "(Bengali,English)"
+    },
+    {
+      "name": "Yoga",
+      "code": "YOGA",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Meditation Room",
+      "code": "MDTRM",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "First-aid Services",
+      "code": "FIRSTAID",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Activity Centre",
+      "code": "ACTICENT",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Airport Transfers",
+      "code": "AIRTRANS",
+      "category": "Transfers",
+      "subText": "(Paid - Private taxi)"
+    },
+    {
+      "name": "Sofa",
+      "code": "SOFA",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Living Area",
+      "code": "LVNGAREA",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Hairdryer",
+      "code": "HRDRYR",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Iron/Ironing Board",
+      "code": "IRONBRD",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Mini Fridge",
+      "code": "MNFRRDGE",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Geyser/Water Heater",
+      "code": "GEYSER",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Toiletries",
+      "code": "TOILTRIES",
+      "category": "Room Amenities",
+      "subText": "(Shampoo,Soap)"
+    },
+    {
+      "name": "Work Desk",
+      "code": "WORKDESK",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Mineral Water",
+      "code": "MNRLWTR",
+      "category": "Room Amenities",
+      "subText": "(Free)"
+    },
+    {
+      "name": "Balcony",
+      "code": "BLCNY",
+      "category": "Room Amenities",
+      "subText": "(Private)"
+    },
+    {
+      "name": "Bar",
+      "code": "BAR",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Dining Area",
+      "code": "DINING",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Kid's Menu",
+      "code": "KIDMENU",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "CCTV",
+      "code": "CCTVSUR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Fire Extinguishers",
+      "code": "FIREXTNGSHR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security alarms",
+      "code": "SECLRM",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security Guard",
+      "code": "SECGAU",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Entertainment",
+      "code": "EVENTS",
+      "category": "Entertainment",
+      "subText": null
+    },
+    {
+      "name": "Professional Photography",
+      "code": "PHOTO",
+      "category": "Entertainment",
+      "subText": null
+    },
+    {
+      "name": "Music System",
+      "code": "MUSSYS",
+      "category": "Entertainment",
+      "subText": null
+    },
+    {
+      "name": "TV",
+      "code": "TELEVISION",
+      "category": "Media and technology",
+      "subText": null
+    },
+    {
+      "name": "Spa",
+      "code": "SPA",
+      "category": "Beauty and Spa",
+      "subText": null
+    },
+    {
+      "name": "Bonfire",
+      "code": "BONFIRE",
+      "category": "Outdoor Activities and Sports",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Outdoor Sports",
+      "code": "OACTS",
+      "category": "Outdoor Activities and Sports",
+      "subText": null
+    },
+    {
+      "name": "Cycling",
+      "code": "CYCLING",
+      "category": "Outdoor Activities and Sports",
+      "subText": null
+    },
+    {
+      "name": "Indoor games room",
+      "code": "INDOOR",
+      "category": "Indoor Activities and Sports",
+      "subText": null
+    },
+    {
+      "name": "Lounge",
+      "code": "LNG",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Balcony/Terrace",
+      "code": "BALCTERR",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Outdoor Furniture",
+      "code": "OUTDOORFURN",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Reception",
+      "code": "RECEPT",
+      "category": "Common Area",
+      "subText": "(24 hours)"
+    },
+    {
+      "name": "Garden",
+      "code": "GARDEN",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Souvenir Shop",
+      "code": "SOVRSHOP",
+      "category": "Shopping",
+      "subText": null
+    },
+    {
+      "name": "Printer",
+      "code": "PNTR",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Photocopying",
+      "code": "PHTCPYG",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Business Centre",
+      "code": "BUSNS",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Conference Room",
+      "code": "CNFRNCEROOM",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Banquet",
+      "code": "BNQTHALL",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Kids' Play Area",
+      "code": "Kids' Play Area",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Cloak Room",
+      "code": "Cloak Room",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Medical centre (Within Premise)",
+      "code": "Medical centre (Within Premise)",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "EV Charging Station (Within Premise)",
+      "code": "EV Charging Station (Within Premise)",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Breakfast",
+      "code": "Breakfast",
+      "category": "Other Facilities",
+      "subText": null
+    }
+  ],
+  "highlightedAmenities": [
+    "Parking",
+    "Indoor Games",
+    "Restaurant"
+  ],
+  "rooms": [
+    {
+      "roomCode": "2119",
+      "roomName": "Suite Room",
+      "maxGuest": 4.0,
+      "roomSize": "550 sq.ft",
+      "roomViewName": "Valley View",
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Basic Facilities",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 3
+    },
+    {
+      "roomCode": "20432",
+      "roomName": "Deluxe Room with Balcony",
+      "maxGuest": 4.0,
+      "roomSize": "350 sq.ft",
+      "roomViewName": "River View",
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Basic Facilities",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 3
+    },
+    {
+      "roomCode": "35885",
+      "roomName": "Superior Room with Balcony",
+      "maxGuest": 4.0,
+      "roomSize": "300 sq.ft",
+      "roomViewName": "",
+      "beds": [
+        {
+          "type": "Queen Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Basic Facilities",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 3
+    },
+    {
+      "roomCode": "974080865",
+      "roomName": "Special Room with Valley View",
+      "maxGuest": 4.0,
+      "roomSize": "275 sq.ft",
+      "roomViewName": "Valley View",
+      "beds": [
+        {
+          "type": "Double Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Kitchen and Appliances",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 4
+    }
+  ],
+  "image": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202403312231516843-6336da43-f5cb-4f92-8b8b-41be18dc0dbb.jpg",
+  "houseRules": {
+    "commonRules": [
+      {
+        "category": "Guest Profile",
+        "id": "GuestProfile",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Primary guest should be atleast 18 years of age",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Groups with only male guests are allowed at the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": true,
+        "expandRules": false,
+        "categoryId": 1.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "ID Proof Related",
+        "id": "IDProofRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Local ids are allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 13.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Smoking/Alcohol consumption Rules",
+        "id": "SmokingAlcoholconsumptionRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Alcohol consumption is not allowed within the property premises.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Smoking within the premises is not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 3.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Property Accessibility",
+        "id": "PropertyAccessibility",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "This property is accessible to guests who use a wheelchair. Guests are requested to carry their own wheelchair. ",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 12.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Pet(s) Related",
+        "id": "PetsRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Pets are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "There are no pets living on the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 7.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Other Rules",
+        "id": "OtherRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Allows private parties or events",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 10.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Infant Policy",
+        "id": "InfantPolicy",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "1 infant (0-2 yrs) will be counted in room capacity",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 28.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      }
+    ],
+    "childExtraBedPolicy": {
+      "policyInfo": "An extra bed will be provided to accommodate any child included in the booking for a charge mentioned below. (Subject to availability)",
+      "policyRules": [
+        {
+          "extraBedTerms": [
+            {
+              "value": "INR 1500 will be charged for an extra mattress per child. (To be paid at the property)"
+            }
+          ]
+        }
+      ],
+      "label": "Child Extra Bed Policy",
+      "id": "ChildExtraBedPolicy",
+      "paid": true
+    },
+    "extraBedPolicyList": [
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any child included in the booking for a charge mentioned below. (Subject to availability)",
+        "policyRules": [
+          {
+            "extraBedTerms": [
+              {
+                "value": "INR 1500 will be charged for an extra mattress per child. (To be paid at the property)"
+              }
+            ]
+          }
+        ],
+        "label": "Child Extra Bed Policy",
+        "id": "ChildExtraBedPolicy",
+        "paid": true
+      },
+      {
+        "policyInfo": "An extra bed will be provided to accommodate any additional guest included in the booking for a charge mentioned below. (Subject to availability)",
+        "policyRules": [
+          {
+            "extraBedTerms": [
+              {
+                "value": "INR 2000 will be charged for an extra mattress per guest. (To be paid at the property)"
+              }
+            ]
+          }
+        ],
+        "label": "Adult Extra Bed Policy",
+        "id": "AdultExtraBedPolicy",
+        "paid": true
+      }
+    ],
+    "contextRules": {
+      "category": "Couple Friendly",
+      "title": "Couple, Bachelor Rules",
+      "desc": "Unmarried couples/guests with Local IDs are allowed.",
+      "tag": "Couple Friendly",
+      "ruleIcon": "https://promos.makemytrip.com/Hotels_product/Details/Couplefriendly2x.png"
+    },
+    "mustReadRules": {
+      "category": "Must Read Rules",
+      "id": "restrictions",
+      "showInHost": false,
+      "rules": [
+        {
+          "text": "Primary Guest should be atleast 18 years of age."
+        },
+        {
+          "text": "Groups with only male guests are allowed at the property"
+        },
+        {
+          "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)"
+        },
+        {
+          "text": "Pets are not allowed"
+        },
+        {
+          "text": "Outside food is not allowed"
+        },
+        {
+          "text": "Smoking within the premises is not allowed"
+        }
+      ],
+      "showInDetailHome": true,
+      "expandRules": true,
+      "showInL2Page": true,
+      "showArrowInDetailHome": true
+    }
+  },
+  "locationDetail": {
+    "id": "CTKUU",
+    "name": "Manali",
+    "type": "city",
+    "countryId": "IN",
+    "countryName": "India"
+  }
+}

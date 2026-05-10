@@ -1,0 +1,585 @@
+{
+  "url": "https://www.makemytrip.com/hotels/myspace_hotel_shree_vaibhav-details-nagpur.html",
+  "hotelId": "201201121320188345",
+  "name": "Myspace Hotel Shree Vaibhav",
+  "starRating": 0.0,
+  "propertyType": "Hotel",
+  "checkinTime": "12 PM",
+  "checkoutTime": "12 PM",
+  "lat": 21.144464,
+  "lng": 79.08217,
+  "pinCode": "440012",
+  "address": {
+    "line1": "Sitabuldi, Nagpur  Mahajan Market ",
+    "city": "Nagpur",
+    "postalCode": "440012",
+    "country": "IN"
+  },
+  "shortDesc": "Located within 1 km radius of Railway Station, 7 km radius from Nagpur Airport and Krishnum South Indian Restaurant, Hotel Shree ",
+  "longDesc": "<p>Located within 1 km radius of Railway Station, 7 km radius from Nagpur Airport and Krishnum South Indian Restaurant, Hotel Shree Vaibhav houses conference rooms and banquet halls.</p>\r\n\r\n<p></p>\r\n\r\n<p>Hotel Shree Vaibhav, located in the heart of the city, is a 3 star accommodation that offers 47 spacious rooms, divided as Single Room AC, Double Room AC, Deluxe Room AC, Super Deluxe AC, Super Deluxe Suite AC, Deluxe Room Double and Deluxe Room Single. Located near this hotel are many tourist attractions of the city, such as Sitalbudi Fort, Deekshabhoomi, Jama Masjid, Ambazari Lake and Maharajbaug Zoo.</p>\r\n\r\n<p></p>\r\n\r\n<p>Ideal for leisure travellers, this accommodation provides other facilities, such as doctor-on-call, laundry and car rental. In addition, there are conference rooms and banquet halls within the premises for meetings, seminars and parties.</p>\r\n\r\n<p></p>\r\n\r\n<p>Guests can head to the nearby Krishnum South Indian Restaurant to relish south Indian delicacies. Also, they can visit other nearby restaurants and food joints.</p>\r\n\r\n<p></p>\r\n\r\n<p>Visit Sitalbudi Fort, one of the historical landmarks of the city, while staying at the hotel.</p>\r\n\r\n<p></p>\r\n\r\n<p>Electric kettle available on demand. Smoking as well as Non-Smoking Rooms available. Each room is equipped with a TV set.</p>\r\n",
+  "rating": 3.6,
+  "reviewCount": 9.0,
+  "ratingBreakup": {
+    "1": 5.0,
+    "2": 2.0,
+    "3": 6.0,
+    "4": 14.0,
+    "5": 9.0
+  },
+  "amenities": [
+    {
+      "name": "Laundry Service",
+      "code": "LNDRY",
+      "category": "Basic Facilities",
+      "subText": "(Paid)"
+    },
+    {
+      "name": "Free Wi-Fi",
+      "code": "INTRNT",
+      "category": "Basic Facilities",
+      "subText": "(Free - Speed Suitable for working)"
+    },
+    {
+      "name": "Elevator/Lift",
+      "code": "ELVTR",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Air Conditioning",
+      "code": "AC",
+      "category": "Basic Facilities",
+      "subText": "(Room controlled)"
+    },
+    {
+      "name": "Housekeeping",
+      "code": "HKPNG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Newspaper",
+      "code": "NEWSPAPR",
+      "category": "Basic Facilities",
+      "subText": "(English)"
+    },
+    {
+      "name": "Smoking Rooms",
+      "code": "SMKEROOM",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Room Service",
+      "code": "RMSVC",
+      "category": "Basic Facilities",
+      "subText": "(Limited duration)"
+    },
+    {
+      "name": "Power Backup",
+      "code": "PWRBCKUP",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Umbrellas",
+      "code": "UMBRELLA",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Parking",
+      "code": "PRKG",
+      "category": "Basic Facilities",
+      "subText": null
+    },
+    {
+      "name": "Multilingual Staff",
+      "code": "MLTSTF",
+      "category": "General Services",
+      "subText": "(English)"
+    },
+    {
+      "name": "Caretaker",
+      "code": "CRTKR",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Luggage Assistance",
+      "code": "LGAST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Doctor on Call",
+      "code": "DOCONCALL",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "Concierge",
+      "code": "TRASST",
+      "category": "General Services",
+      "subText": null
+    },
+    {
+      "name": "First-aid Services",
+      "code": "FIRSTAID",
+      "category": "Health and wellness",
+      "subText": null
+    },
+    {
+      "name": "Geyser/Water Heater",
+      "code": "GEYSER",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Work Desk",
+      "code": "WORKDESK",
+      "category": "Room Amenities",
+      "subText": "(Available in some rooms)"
+    },
+    {
+      "name": "Toiletries",
+      "code": "TOILTRIES",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Dental Kit",
+      "code": "DENTLKT",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Mineral Water - additional charge",
+      "code": "MNRLWTR",
+      "category": "Room Amenities",
+      "subText": null
+    },
+    {
+      "name": "Dining Area",
+      "code": "DINING",
+      "category": "Food and Drinks",
+      "subText": null
+    },
+    {
+      "name": "Security alarms",
+      "code": "SECLRM",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Security Guard",
+      "code": "SECGAU",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "Fire Extinguishers",
+      "code": "FIREXTNGSHR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "CCTV",
+      "code": "CCTVSUR",
+      "category": "Safety and Security",
+      "subText": null
+    },
+    {
+      "name": "TV",
+      "code": "TELEVISION",
+      "category": "Media and technology",
+      "subText": "(Flat screen)"
+    },
+    {
+      "name": "Reception",
+      "code": "RECEPT",
+      "category": "Common Area",
+      "subText": null
+    },
+    {
+      "name": "Fax Service",
+      "code": "FAXSERV",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Printer",
+      "code": "PNTR",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Photocopying",
+      "code": "PHTCPYG",
+      "category": "Business Center and Conferences",
+      "subText": null
+    },
+    {
+      "name": "Medical centre (Within Premise)",
+      "code": "Medical centre (Within Premise)",
+      "category": "Other Facilities",
+      "subText": null
+    },
+    {
+      "name": "Cloak Room",
+      "code": "Cloak Room",
+      "category": "Other Facilities",
+      "subText": null
+    }
+  ],
+  "highlightedAmenities": [
+    "Smoking Rooms",
+    "Power Backup",
+    "Elevator/Lift",
+    "Housekeeping",
+    "Umbrellas",
+    "Room Service"
+  ],
+  "rooms": [
+    {
+      "roomCode": "252",
+      "roomName": "Superior Room",
+      "maxGuest": 4.0,
+      "roomSize": "170 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 6
+    },
+    {
+      "roomCode": "2249",
+      "roomName": "Deluxe Room",
+      "maxGuest": 4.0,
+      "roomSize": "250 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "King Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 5
+    },
+    {
+      "roomCode": "818038023",
+      "roomName": "Mini S",
+      "maxGuest": 1.0,
+      "roomSize": "120 sq.ft",
+      "roomViewName": "City View",
+      "beds": [
+        {
+          "type": "Single Bed",
+          "count": 1.0
+        }
+      ],
+      "amenities": [
+        "Popular with Guests",
+        "Room Features",
+        "Basic Facilities",
+        "Beds and Blanket",
+        "Safety and Security",
+        "Media and Entertainment",
+        "Bathroom",
+        "Other Facilities"
+      ],
+      "imageCount": 6
+    }
+  ],
+  "image": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201201121320188345-a82e0187-e288-498c-9c80-518586743f78.jpg",
+  "houseRules": {
+    "commonRules": [
+      {
+        "category": "Guest Profile",
+        "id": "GuestProfile",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Primary guest should be atleast 18 years of age",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Groups with only male guests are allowed at the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": true,
+        "expandRules": false,
+        "categoryId": 1.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Guest Profile (Hourly)",
+        "id": "GuestProfileHourly",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Unmarried couples are not allowed in hourly stay rooms",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 21.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "ID Proof Related",
+        "id": "IDProofRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Local ids not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 13.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Smoking/Alcohol consumption Rules",
+        "id": "SmokingAlcoholconsumptionRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Alcohol consumption is not allowed within the property premises.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Smoking within the premises is not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 3.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Food Arrangement",
+        "id": "FoodArrangement",
+        "showInHost": true,
+        "hostCatHeading": "Food Arrangements at the property",
+        "rules": [
+          {
+            "text": "Non veg food is allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Outside food is allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Food Delivery is available",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Food Delivery available from Zomato and Swiggy",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "In room dining available",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 2.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Property Accessibility",
+        "id": "PropertyAccessibility",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "This property is not accessible to guests who use a wheelchair. Please make arrangements accordingly.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 12.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Pet(s) Related",
+        "id": "PetsRelated",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Pets are not allowed",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "There are no pets living on the property",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 7.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      },
+      {
+        "category": "Other Rules",
+        "id": "OtherRules",
+        "showInHost": false,
+        "rules": [
+          {
+            "text": "Does not allow private parties or events",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Guests are requested not to invite outside visitors in the room during their stay.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          },
+          {
+            "text": "Unmarried couples are strictly not allowed \nBooking rates will not be valid for Christmas and New year dates, High season and long weekend dates  extra supplement will be charged over and above the paid rates as per actual and hotel discretion.",
+            "sentiment": 0.0,
+            "templateText": "",
+            "display": false
+          }
+        ],
+        "showInDetailHome": false,
+        "expandRules": false,
+        "categoryId": 10.0,
+        "showInL2Page": true,
+        "showArrowInDetailHome": true
+      }
+    ],
+    "childExtraBedPolicy": {
+      "policyInfo": "No extra bed will be provided to accommodate any child included in the booking.",
+      "label": "Child Extra Bed Policy",
+      "id": "ChildExtraBedPolicy",
+      "paid": true
+    },
+    "extraBedPolicyList": [
+      {
+        "policyInfo": "No extra bed will be provided to accommodate any child included in the booking.",
+        "label": "Child Extra Bed Policy",
+        "id": "ChildExtraBedPolicy",
+        "paid": true
+      },
+      {
+        "policyInfo": "No extra bed will be provided to accommodate any additional guest included in the booking.",
+        "label": "Adult Extra Bed Policy",
+        "id": "AdultExtraBedPolicy",
+        "paid": true
+      }
+    ],
+    "mustReadRules": {
+      "category": "Must Read Rules",
+      "id": "restrictions",
+      "showInHost": false,
+      "rules": [
+        {
+          "text": "Primary Guest should be atleast 18 years of age."
+        },
+        {
+          "text": "Groups with only male guests are allowed at the property"
+        },
+        {
+          "text": "Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s)"
+        },
+        {
+          "text": "Pets are not allowed"
+        },
+        {
+          "text": "Smoking within the premises is not allowed"
+        }
+      ],
+      "showInDetailHome": true,
+      "expandRules": true,
+      "showInL2Page": true,
+      "showArrowInDetailHome": true
+    }
+  },
+  "locationDetail": {
+    "id": "CTNAG",
+    "name": "Nagpur",
+    "type": "city",
+    "countryId": "IN",
+    "countryName": "India"
+  }
+}
