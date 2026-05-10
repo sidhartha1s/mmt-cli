@@ -13,7 +13,8 @@ before you trust any number out of this repo.
 |-----------|------|--------|
 | Listing extractor (DOM scrape, strikethrough-safe) | `extractor/mmt_extract.py` | **Production.** Validated offline (15/15 cards, 3/3 expected names, no strikethrough leaks). Live works when the egress IP is not Akamai-flagged. |
 | URL discovery (Bing/DDG → MMT detail URL) | `extractor/discover_urls.py` | **Experimental.** Brand-strip variants + multi-query Bing recover ~25–30% on small chains. Properties not listed on MMT can't be discovered. |
-| Detail-page enrichment (curl_cffi TLS impersonation) | `extractor/mmt_detail.py`, `batch_detail.py` | **Research.** Bypasses Akamai for short windows, then the egress IP is hardened and warmup itself fails. Treat per-run success rates as anecdotal until backed by a paid proxy/vendor. |
+| Detail-page enrichment, curl_cffi path | `extractor/mmt_detail.py`, `batch_detail.py` | **Research.** TLS-impersonation (chrome110/safari17_0) + warmup chain. Fast (~1s/row) but Akamai hardens the egress within minutes-to-hours; HTTP/2 INTERNAL_ERROR on warmup is the typical failure mode. |
+| Detail-page enrichment, Playwright path | `extractor/batch_detail_pw.py` | **Research.** Real Firefox tab + same warmup chain. Slower (~6s/row) but works when the curl path is blocked. Same parse pipeline as the curl path; only the fetcher swaps. |
 
 The "production" line is listing extraction. The other two are useful as
 building blocks but should not be load-bearing in client onboarding without
@@ -112,14 +113,17 @@ mmt-cli/
 │   ├── validate_offline.py   # production: offline regression test
 │   ├── parser_smoke_test.py  # CI: offline tests for parser internals
 │   ├── discover_urls.py      # experimental: Bing/DDG URL discovery
-│   ├── mmt_detail.py         # research: detail-page extractor (Akamai-blocked)
-│   └── batch_detail.py       # research: batch wrapper around mmt_detail
+│   ├── mmt_detail.py         # research: detail extractor (curl_cffi fetch + parsers)
+│   ├── batch_detail.py       # research: curl_cffi batch wrapper
+│   └── batch_detail_pw.py    # research: Playwright batch wrapper (when curl is blocked)
 ├── test-fixtures/
 │   ├── offline_extract.json     # 15-card listing fixture for validate_offline
 │   ├── goa.json / goa.png       # last live listing run
 │   └── gdhotels_properties.json # curated 22-property seed list (input only)
 ├── experiments/
-│   └── gdhotels_2026-05-10/  # one run's discovery+detail outputs (NOT a fixture)
+│   ├── gdhotels_2026-05-10/     # discovery + curl_cffi detail run (1/6 ok)
+│   ├── gdhotels_2026-05-11/     # curl_cffi rerun, egress hardened (0/6, structured-fail proof)
+│   └── gdhotels_2026-05-11_pw/  # Playwright detail run (5/6 ok)
 ├── .github/workflows/ci.yml  # compileall + parser smoke test on every push
 ├── requirements.txt          # playwright(+stealth), curl_cffi
 └── docs/LEARNINGS.md         # design notes, dead ends, what worked
