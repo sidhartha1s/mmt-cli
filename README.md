@@ -1,57 +1,28 @@
 # mmt-cli
 
-Free, internal-use CLI for extracting hotel listings from
-[makemytrip.com](https://www.makemytrip.com/hotels/). Built for Simplotel client
-onboarding to eliminate strikethrough-corruption-on-copy-paste — the live MMT
-listing UI shows discount markdowns as struck-through prices, which copy-pasted
-as the wrong value into onboarding sheets.
+A free, internal Python CLI that extracts hotel listings from [makemytrip.com](https://www.makemytrip.com/hotels/) for Simplotel client onboarding.
 
-**Status:** parser is production-ready (validated offline, 15/15 cards, 3/3
-expected names, strikethrough filter clean). Live extraction works when the
-egress IP is not Akamai-flagged.
+The live MakeMyTrip listing UI shows discount markdowns as struck-through prices; copy-pasting them into onboarding sheets grabs the wrong value. This tool extracts the post-filter price directly from the rendered DOM instead.
 
 ## What it does
 
 1. Loads a MakeMyTrip listing URL in a real Firefox browser via Playwright.
-2. Lets the page hydrate, scrolls to trigger lazy renders.
-3. Extracts hotel cards directly from the rendered DOM, using
-   `getComputedStyle(node).textDecoration` to filter `line-through` nodes
-   out of the displayed-price field. Strikethrough prices are kept in a
-   separate `strikethroughPrices[]` array for audit.
-4. Outputs structured JSON. Each card carries: `name`, `location`,
-   `price` (post-filter), `strikethroughPrices[]`, `rating`, `ratingLabel`,
-   `reviewCount`, `hotelId`, `photoCount`, `badges[]`, `detailUrl`.
+2. Waits for hydration and scrolls to trigger lazy-rendered cards.
+3. Extracts hotel cards from the DOM, using `getComputedStyle(node).textDecoration` to filter `line-through` nodes out of the displayed price. Struck-through prices are kept separately (`strikethroughPrices[]`) for audit.
+4. Outputs structured JSON per card: `name`, `location`, `price`, `strikethroughPrices[]`, `rating`, `ratingLabel`, `reviewCount`, `hotelId`, `photoCount`, `badges[]`, `detailUrl`.
 
-## Why DOM scrape (not API replay)
+Status: the parser is validated offline (15/15 cards, 3/3 expected names, no strikethrough leaks). Live extraction works as long as the egress IP isn't Akamai-flagged.
 
-MMT's internal XHR endpoint
-(`/api/hotels-search/listing/v3/search-hotels`) is gated by Akamai Bot
-Manager. The endpoint returns a 6-byte `200-OK` sentinel string until the
-calling browser session has been validated through Akamai's `bm_sv` sensor
-flow. The `_abck` cookie state is the easiest tell:
-
-| `_abck` length | Meaning |
-|----------------|---------|
-| ~531 bytes | Bootstrap (cookie issued, sensor not yet validated) |
-| ~799 bytes | Sensor-validated (real data flows) |
-
-Replaying the request from `urllib`, `curl`, or `fetch()` inside a
-freshly-launched Playwright context **fails consistently** — the Akamai
-signal includes browser-fingerprint and timing telemetry the replay cannot
-reproduce. We tested headless+headed across Firefox, WebKit, and Chromium;
-the gating is not a head/headless discriminator alone.
-
-So we skipped the API rabbit hole and went DOM-first. The listing page
-itself renders the hotel cards via SSR + hydration, no XHR needed.
-
-## Quickstart
+## Install
 
 ```bash
-# install deps
 pip install playwright playwright-stealth
 playwright install firefox
+```
 
-# extract Goa hotels
+## Usage
+
+```bash
 python3 extractor/mmt_extract.py \
     --city goa \
     --checkin 2026-05-15 --checkout 2026-05-16 \
@@ -61,107 +32,36 @@ python3 extractor/mmt_extract.py \
     --headless
 ```
 
-Output is JSON; one object per card.
+Output is one JSON object per hotel card.
 
-## Offline self-test
-
-The repo ships a saved 788KB MMT listing fixture and a validator that
-proves the parser works without live Akamai:
+### Offline regression test
 
 ```bash
 python3 extractor/validate_offline.py
 ```
 
-Asserts: ≥3 cards extracted, three expected hotel names present
-(SinQ Beach Resort, Natures Nest Goa, Ronil Goa part of Hyatt), and no
-strikethrough price leaks into the displayed-price field.
+Runs the parser against a saved 788 KB listing fixture and asserts: at least 3 cards extracted, the 3 expected hotel names present (SinQ Beach Resort, Natures Nest Goa, Ronil Goa part of Hyatt), and no strikethrough price leaks into the displayed price. Run this after any change to `EXTRACT_JS`.
 
-This is the regression test. **Run it after any change to `EXTRACT_JS`.**
+## Why DOM scrape, not API replay
 
-## Akamai IP-flag caveat
+MMT's internal search endpoint (`/api/hotels-search/listing/v3/search-hotels`) is gated by Akamai Bot Manager and returns a 6-byte sentinel string until the session passes Akamai's `bm_sv` sensor flow. The `_abck` cookie length is the tell: ~531 bytes means bootstrap (not yet validated), ~799 bytes means sensor-validated and real data flows. Replaying the request from `urllib`, `curl`, or `fetch()` inside a fresh Playwright context fails consistently across headless/headed Firefox, WebKit, and Chromium, so this tool renders the listing page itself (SSR + hydration) instead of hitting the XHR endpoint.
 
-After sustained development hammering from the same egress, Akamai may
-silently throttle the source IP. Symptoms:
+## Layout
 
-- `goto` succeeds but the listing HTML stays under ~500KB
-- DOM extracts 0 cards even though the page looks fine in a real browser
-- `_abck` cookie stays at ~531 bytes through scrolling
+| Path | Role |
+|------|------|
+| `extractor/mmt_extract.py` | Production listing extractor, multi-engine fallback |
+| `extractor/mmt_detail.py` | Detail-page extractor, uses `curl_cffi` for TLS impersonation |
+| `extractor/validate_offline.py` | Offline regression test against the saved fixture |
+| `test-fixtures/offline_extract.json` | Saved 15-card fixture used by the offline test |
+| `catalog/makemytrip.yaml` | Wrapper-only entry registering this tool in `cli-printing-press`'s catalog |
+| `docs/LEARNINGS.md` | Design notes, dead ends, what worked |
 
-**Recovery:**
-- Cool down 2–6 hours and retry
-- Run from a different egress (mobile hotspot, residential VPN)
-- The offline fixture (`test-fixtures/offline_extract.json`) and
-  `validate_offline.py` keep the parser reproducible regardless of
-  live access
+## Notes / Gotchas
 
-## Repo layout
+- **IP-flag symptom:** after sustained hammering from the same egress, Akamai may silently throttle it. Signs: `goto` succeeds but the listing HTML stays under ~500KB, DOM extracts 0 cards despite the page looking fine in a real browser, `_abck` stays at ~531 bytes through scrolling. Recovery: cool down 2-6 hours, or switch egress (mobile hotspot, residential VPN). The offline fixture and `validate_offline.py` keep the parser reproducible without live access.
+- License: MIT, internal use within Simplotel.
 
-```
-mmt-cli/
-├── extractor/
-│   ├── mmt_extract.py       # production extractor, multi-engine fallback
-│   └── validate_offline.py  # offline regression test
-├── test-fixtures/
-│   ├── offline_extract.json # 15 hotel cards from saved fixture
-│   ├── goa.json             # last live run (if any)
-│   └── goa.png              # screenshot from last live run
-└── docs/
-    └── LEARNINGS.md         # design notes, dead ends, what worked
-```
+## Related repos
 
-## Integration with cli-printing-press
-
-This extractor is registered in the printing-press catalog at
-`catalog/makemytrip.yaml` as a wrapper-only entry with
-`integration_mode: subprocess`. Pattern matches `google-flights.yaml`
-(which wraps `punitarani/fli` the same way). Surfaced via:
-
-```bash
-./printing-press catalog show makemytrip
-./printing-press catalog search travel
-```
-
-Wrapper-only catalog entries are advisory — pp does not auto-generate Go
-scaffolding for them. The contract is "the catalog tells the user (or an
-agent) which wrapper library to invoke." Same pathway as `google-flights`.
-
-### Persisting the catalog entry
-
-`catalog/makemytrip.yaml` is currently **untracked** in the upstream pp
-clone at `/home/sidhartha/cli-printing-press` (which tracks
-`mvanhorn/cli-printing-press`). `git pull` on that repo will NOT delete
-the untracked file, but `git clean -fdx` would, and an upstream collision
-on the same filename would force a rename.
-
-To make the entry durable, pick one:
-
-1. **Local branch** (lightest):
-   ```bash
-   cd /home/sidhartha/cli-printing-press
-   git checkout -b simplotel/mmt-catalog
-   git add catalog/makemytrip.yaml
-   git commit -m "feat(cli): add makemytrip wrapper-only catalog entry"
-   ```
-   Switch to this branch when rebuilding pp; rebase onto upstream `main` periodically.
-
-2. **Hardlink from this repo** (what we ship): keep the canonical YAML in
-   `mmt-cli/catalog/makemytrip.yaml`, hardlink it into the pp tree, rebuild.
-   ```bash
-   ln /home/sidhartha/mmt-cli/catalog/makemytrip.yaml \
-      /home/sidhartha/cli-printing-press/catalog/makemytrip.yaml
-   ```
-   Hardlink (not symlink) because Go's `go:embed *.yaml` rejects symlinks
-   with `cannot embed irregular file`. A hardlink shares the inode, so a
-   single edit is visible in both repos and `go:embed` accepts it as a
-   regular file. Recreate after a fresh pp clone (hardlinks don't survive
-   git checkout into a new working tree).
-
-3. **Fork pp**: push `simplotel/cli-printing-press` and land the entry on a
-   long-lived branch.
-
-Until one of these is done, treat the catalog entry as ephemeral and re-add
-from this repo if needed.
-
-## License
-
-MIT — internal use within Simplotel.
+Registered as a wrapper-only entry (`integration_mode: subprocess`) in the `cli-printing-press` catalog, surfaced via `printing-press catalog show makemytrip` / `catalog search travel`. The canonical `catalog/makemytrip.yaml` lives in this repo; it's hardlinked (not symlinked, since Go's `go:embed` rejects symlinks) into a local `cli-printing-press` checkout so edits here stay visible there. That hardlink must be recreated after any fresh `cli-printing-press` clone.
